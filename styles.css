@@ -20,6 +20,7 @@ h1 {
   background-color: #49a078;
   font-size: 20px;
   font-weight: 600;
+  width: 100%;
 }
 input {
   width: 550px;
