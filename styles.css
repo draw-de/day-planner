@@ -1,0 +1,27 @@
+body {
+  color: #1f2421;
+}
+header {
+  text-align: center;
+  background-color: #216869;
+  font-size: 25px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: #dce1de;
+}
+h1 {
+  font-size: 50px;
+}
+.planner {
+  background: #9cc5a1;
+}
+.times {
+  text-align: center;
+  background-color: #49a078;
+  font-size: 20px;
+  font-weight: 600;
+}
+input {
+  width: 550px;
+  margin-left: 25%;
+}
