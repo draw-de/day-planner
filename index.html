@@ -10,7 +10,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body onload="savedInput()">
     <div class="header">
       <header>
         <div id="title"><h1>Day Planner</h1></div>
@@ -18,91 +18,53 @@
       </header>
     </div>
     <div class="container">
-      <form id="planner-form">
-        <div class="planner">
-          <div id="9AM">
-            <label class="times" for="input9AM">9:00 AM</label>
-            <ul id="9amList"></ul>
-            <input
-              id="input9AM"
-              type="text"
-              placeholder="Maybe get some pie?"
-            />
-          </div>
-          <div id="10AM">
-            <label class="times" for="input10AM">10:00 AM</label>
-            <ul id="10amList"></ul>
-            <input
-              id="input10AM"
-              type="text"
-              placeholder="Maybe get some pie?"
-            />
-          </div>
-          <div id="11AM">
-            <label class="times" for="input11AM">11:00 AM</label>
-            <ul id="11amList"></ul>
-            <input
-              id="input11AM"
-              type="text"
-              placeholder="Maybe get some pie?"
-            />
-          </div>
-          <div id="12PM">
-            <label for="input12PM" class="times">12:00 PM</label>
-            <ul id="12pmList"></ul>
-            <input
-              id="input12PM"
-              type="text"
-              placeholder="Maybe get some pie?"
-            />
-          </div>
-          <div id="1PM">
-            <label for="input1PM" class="times">1:00 PM</label>
-            <ul id="1pmList"></ul>
-            <input
-              id="input1PM"
-              type="text"
-              placeholder="Maybe get some pie?"
-            />
-          </div>
-          <div id="2PM">
-            <label for="input2PM" class="times">2:00 PM</label>
-            <ul id="2pmList"></ul>
-            <input
-              id="input2PM"
-              type="text"
-              placeholder="Maybe get some pie?"
-            />
-          </div>
-          <div id="3PM">
-            <label for="input3PM" class="times">3:00 PM</label>
-            <ul id="3pmList"></ul>
-            <input
-              id="input3PM"
-              type="text"
-              placeholder="Maybe get some pie?"
-            />
-          </div>
-          <div id="4PM">
-            <label for="input4PM" class="times">4:00 PM</label>
-            <ul id="4pmList"></ul>
-            <input
-              id="input4PM"
-              type="text"
-              placeholder="Maybe get some pie?"
-            />
-          </div>
-          <div id="5PM">
-            <label for="input5PM" class="times">5:00 PM</label>
-            <ul id="5pmList"></ul>
-            <input
-              id="input5PM"
-              type="text"
-              placeholder="Maybe get some pie?"
-            />
-          </div>
+      <div class="planner">
+        <div id="9AM">
+          <label class="times" for="input9AM">9:00 AM</label>
+          <input id="input9AM" type="text" placeholder="Maybe get some pie?" />
+          <button class="btn btn-primary save" onclick="saveInput()" id="save9AM">Save</button>
         </div>
-      </form>
+        <div id="10AM">
+          <label class="times" for="input10AM">10:00 AM</label>
+          <input id="input10AM" type="text" placeholder="Maybe get some pie?" />
+          <button class="btn btn-primary save" onclick="saveInput()" id="save9AM">Save</button>
+        </div>
+        <div id="11AM">
+          <label class="times" for="input11AM">11:00 AM</label>
+          <input id="input11AM" type="text" placeholder="Maybe get some pie?" />
+          <button class="btn btn-primary save" onclick="saveInput()" id="save9AM">Save</button>
+        </div>
+        <div id="12PM">
+          <label for="input12PM" class="times">12:00 PM</label>
+          <input id="input12PM" type="text" placeholder="Maybe get some pie?" />
+          <button class="btn btn-primary save" onclick="saveInput()" id="save9AM">Save</button>
+        </div>
+        <div id="1PM">
+          <label for="input1PM" class="times">1:00 PM</label>
+          <input id="input1PM" type="text" placeholder="Maybe get some pie?" />
+          <button class="btn btn-primary save" onclick="saveInput()" id="save9AM">Save</button>
+        </div>
+        <div id="2PM">
+          <label for="input2PM" class="times">2:00 PM</label>
+          <input id="input2PM" type="text" placeholder="Maybe get some pie?" />
+          <button class="btn btn-primary save" onclick="saveInput()" id="save9AM">Save</button>
+        </div>
+        <div id="3PM">
+          <label for="input3PM" class="times">3:00 PM</label>
+          <input id="input3PM" type="text" placeholder="Maybe get some pie?" />
+          <button class="btn btn-primary save" onclick="saveInput()" id="save9AM">Save</button>
+        </div>
+        <div id="4PM">
+          <label for="input4PM" class="times">4:00 PM</label>
+          <input id="input4PM" type="text" placeholder="Maybe get some pie?" />
+          <button class="btn btn-primary save" onclick="saveInput()" id="save9AM">Save</button>
+        </div>
+        <div id="5PM">
+          <label for="input5PM" class="times">5:00 PM</label>
+          <input id="input5PM" type="text" placeholder="Maybe get some pie?" />
+          <button class="btn btn-primary save" onclick="saveInput()" id="save9AM">Save</button>
+        </div>
+      </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
