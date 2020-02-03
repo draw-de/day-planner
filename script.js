@@ -1,38 +1,28 @@
 //Shows today's date and time
 $("#date").text(moment().format("LLLL"));
 
-//input times
-var input9AM = $("#input9AM");
-var input10AM = $("#input10AM");
-var input11AM = $("#input11AM");
-var input12PM = $("#input12PM");
-var input1PM = $("#input1PM");
-var input2PM = $("#input2PM");
-var input3PM = $("#input3PM");
-var input4PM = $("#input4PM");
-var input5PM = $("#input5PM");
-
-//planner list
-var list9AM = $("#9amList");
-var list10AM = $("#10amList");
-var list11AM = $("#11amList");
-var list12PM = $("#12pmList");
-var list1PM = $("#1pmList");
-var list2PM = $("#2pmList");
-var list3PM = $("#3pmList");
-var list4PM = $("#4pmList");
-var list5PM = $("#5pmList");
-
-//planner to dos
-var toDo9AM = ["Get milk"];
-var toDo10AM = ["Go to work"];
-var toDo11AM = ["Work"];
-var toDo12PM = ["Lunch"];
-var toDo1PM = ["Back to work"];
-var toDo2PM = ["Break"];
-var toDo3PM = ["Go home"];
-var toDo4PM = ["Chill"];
-var toDo5PM = ["Get dinner"];
-
-//others
-var plannerForm = $("planner-form");
+//Save functions
+function saveInput(){
+    localStorage.setItem("9AM",$("#input9AM").val())
+    localStorage.setItem("10AM",$("#input10AM").val())
+    localStorage.setItem("11AM",$("#input11AM").val())
+    localStorage.setItem("12PM",$("#input12PM").val())
+    localStorage.setItem("1PM",$("#input1PM").val())
+    localStorage.setItem("2PM",$("#input2PM").val())
+    localStorage.setItem("3PM",$("#input3PM").val())
+    localStorage.setItem("4PM",$("#input4PM").val())
+    localStorage.setItem("5PM",$("#input5PM").val())
+}
+  
+  //Local storage
+function savedInput(){
+    $("#input9AM").val(localStorage.getItem("9AM"))
+    $("#input10AM").val(localStorage.getItem("10AM"))
+    $("#input11AM").val(localStorage.getItem("11AM"))
+    $("#input12PM").val(localStorage.getItem("12PM"))
+    $("#input1PM").val(localStorage.getItem("1PM"))
+    $("#input2PM").val(localStorage.getItem("2PM"))
+    $("#input3PM").val(localStorage.getItem("3PM"))
+    $("#input4PM").val(localStorage.getItem("4PM"))
+    $("#input5PM").val(localStorage.getItem("5PM"))
+}
