@@ -17,12 +17,18 @@ $("input").each(function(index, element) {
   var greenStyles = {
     backgroundColor: "#d0e3c8"
   };
+  var orangeStyles = {
+    backgroundColor: "#f0dfb4"
+  };
 
   if (time > parseInt(times)) {
     $(this).css(redStyles);
   }
   if (time == parseInt(times)) {
     $(this).css(greenStyles);
+  }
+  if (time < parseInt(times)) {
+    $(this).css(orangeStyles);
   }
 });
 
