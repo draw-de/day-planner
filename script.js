@@ -1,53 +1,45 @@
 //Shows today's date and time
 $("#date").text(moment().format("LLLL"));
 
+//Making a variable to grab the time of the hour from moment.js
 var time = moment().format("H");
 
-var times = $("input").attr("time");
-
+//This is just to check the time variable
 console.log(time);
 
 // If statements to check if it's in that certain time block
 
+//You're grabbing each input then doing a callback function for element
 $("input").each(function(index, element) {
-  var times = $(this).attr("time");
-  var redStyles = {
-    backgroundColor: "#f5d7d9"
-  };
-  var greenStyles = {
-    backgroundColor: "#d0e3c8"
-  };
+  //Grabbing the times attribute from the input
+  var hour = $(this).attr("hour");
 
-  if (time > parseInt(times)) {
-    $(this).css(redStyles);
+  //Making an if statement saying if time of the hour is greater than attribute number then make it turn red
+  if (time > parseInt(hour)) {
+    $(this).css("background-color", "#f5d7d9");
   }
-  if (time == parseInt(times)) {
-    $(this).css(greenStyles);
+  //Similar to the first if statement, but just making it equal to the attribute number to turn it green.
+  if (time == parseInt(hour)) {
+    $(this).css("background-color", "#d0e3c8");
+  }
+  if (time < parseInt(hour)) {
+    $(this).css("background-color", "#f0dfb4");
   }
 });
 
 //Save functions
-function saveInput() {
-  localStorage.setItem("9AM", $("#input9AM").val());
-  localStorage.setItem("10AM", $("#input10AM").val());
-  localStorage.setItem("11AM", $("#input11AM").val());
-  localStorage.setItem("12PM", $("#input12PM").val());
-  localStorage.setItem("1PM", $("#input1PM").val());
-  localStorage.setItem("2PM", $("#input2PM").val());
-  localStorage.setItem("3PM", $("#input3PM").val());
-  localStorage.setItem("4PM", $("#input4PM").val());
-  localStorage.setItem("5PM", $("#input5PM").val());
-}
+$(".save").on("click", function() {
+  $("input").each(function() {
+    var id = $(this).attr("id");
+    var value = $(this).val();
+    localStorage.setItem(id, value);
+  });
+});
 
-//Local storage
+//Loads the saved values
 function savedInput() {
-  $("#input9AM").val(localStorage.getItem("9AM"));
-  $("#input10AM").val(localStorage.getItem("10AM"));
-  $("#input11AM").val(localStorage.getItem("11AM"));
-  $("#input12PM").val(localStorage.getItem("12PM"));
-  $("#input1PM").val(localStorage.getItem("1PM"));
-  $("#input2PM").val(localStorage.getItem("2PM"));
-  $("#input3PM").val(localStorage.getItem("3PM"));
-  $("#input4PM").val(localStorage.getItem("4PM"));
-  $("#input5PM").val(localStorage.getItem("5PM"));
+  $("input").each(function() {
+    var id = $(this).attr("id");
+    $(this).val(localStorage.getItem(id));
+  });
 }
