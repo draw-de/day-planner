@@ -11,9 +11,6 @@ console.log(time);
 
 //You're grabbing each input then doing a callback function for element
 $("input").each(function(index, element) {
-  //Grabbing the times attribute from the input
-  var hour = $(this).attr("hour");
-
   //Making an if statement saying if time of the hour is greater than attribute number then make it turn red
   if (time > parseInt(hour)) {
     $(this).css("background-color", "#f5d7d9");
